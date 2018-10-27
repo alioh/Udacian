@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import cgi
+import os
 
 
 class WebServerHandler(BaseHTTPRequestHandler):
@@ -74,8 +75,9 @@ class WebServerHandler(BaseHTTPRequestHandler):
 
 def main():
     try:
-        port = 8080
-        server = HTTPServer(('', port), WebServerHandler)
+        port = int(os.environ.get('PORT', 5000))   # Use PORT if it's there.
+        server_address = ('', port)
+        server = HTTPServer(server_address, WebServerHandler)
         print ("Web Server running on port %s" % port)
         server.serve_forever()
     except KeyboardInterrupt:
