@@ -21,7 +21,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
         memory = []
         form = '''<!DOCTYPE html>
             <title>Udacian</title>
-            <form method="POST" action="http://localhost:8000/">
+            <form method="POST" action="https://tranquil-inlet-88781.herokuapp.com/hello">
                 <textarea name="name">name</textarea>
                 <br>
                 <textarea name="city">city</textarea>
@@ -50,7 +50,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
             memory = []
             form = '''<!DOCTYPE html>
             <title>Udacian</title>
-            <form method="POST" action="http://localhost:8000/">
+            <form method="POST" action="https://tranquil-inlet-88781.herokuapp.com/hello">
                 <textarea name="name">name</textarea>
                 <br>
                 <textarea name="city">city</textarea>
